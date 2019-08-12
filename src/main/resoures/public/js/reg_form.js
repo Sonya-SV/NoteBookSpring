@@ -1,4 +1,4 @@
-angular.module("RegFormApp", [])
+angular.module("registration_form", [])
     .controller("RegCtrl", function ($scope, $http) {
             $scope.auth = {};
             $scope.sendForm = function (auth) {

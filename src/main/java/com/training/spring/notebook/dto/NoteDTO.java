@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ToString
-public class DTONote {
+public class NoteDTO {
 
     private String name;
     private String login;

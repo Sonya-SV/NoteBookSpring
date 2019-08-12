@@ -1,11 +1,11 @@
 package com.training.spring.notebook.service;
 
-import com.training.spring.notebook.dto.NoteDTO;
+import com.training.spring.notebook.dto.UserDTO;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RegFormService {
-    public String inputNote(NoteDTO note){
+public class LoginFormService {
+    public String inputUser(UserDTO name) {
         return "";
     }
 }

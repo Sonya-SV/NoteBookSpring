@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageController {
 
     @RequestMapping("/api")
-    public String mainPage(){
+    public String mainPage() {
         return "index.html";
     }
 
     @RequestMapping("/form")
-    public String showRegistrationForm(){
+    public String showRegistrationForm() {
         return "reg_form";
     }
 }

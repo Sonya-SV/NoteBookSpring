@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 </head>
-<body ng-app="RegFormApp" ng-controller="RegCtrl">
+<body ng-app="registration_form" ng-controller="RegCtrl">
 <#--<div class="col-md-8 col-md-offset-2">-->
 <#--    <h1>Registration Form</h1>-->
 <#--</div>-->
