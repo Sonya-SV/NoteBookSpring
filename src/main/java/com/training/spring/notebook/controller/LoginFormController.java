@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping
+@RequestMapping(value = "/")
 public class LoginFormController {
 
     private final LoginFormService loginFormService;
@@ -23,8 +23,8 @@ public class LoginFormController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public void setLoginFormController(UserDTO user) {
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public void loginFormController(UserDTO user) {
         log.info("{}", user);
     }
 

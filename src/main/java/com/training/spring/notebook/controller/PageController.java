@@ -12,7 +12,7 @@ public class PageController {
     }
 
     @RequestMapping("/form")
-    public String showRegistrationForm() {
+    public String regForm() {
         return "reg_form";
     }
 }

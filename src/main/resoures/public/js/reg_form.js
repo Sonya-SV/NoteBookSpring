@@ -2,21 +2,21 @@ angular.module("registration_form", [])
     .controller("RegCtrl", function ($scope, $http) {
         $scope.auth = {};
         let resultMessageEl = document.getElementById('resultMessage');
-        let exampleInputNameEl = document.getElementById('exampleInputName');
-        let exampleInputLoginEl = document.getElementById('exampleInputLogin');
-        let inputNameLabel = document.getElementById('inputNameLabel');
-        let inputLoginLabel = document.getElementById('inputLoginLabel');
+        let exampleInputNameEl = document.getElementById('exampleInputName1');
+        let exampleInputLoginEl = document.getElementById('exampleInputLogin1');
+        let inputNameLabel = document.getElementById('inputNameLabel1');
+        let inputLoginLabel = document.getElementById('inputLoginLabel1');
         exampleInputNameEl.addEventListener('input', () => {
             inputNameLabel.style.color = 'black';
             inputLoginLabel.style.color = 'black';
             $scope.message = '';
         });
-        $scope.sendForm = function (auth) {
+        $scope.sendForm = function(auth){
             $http({
                 method: "POST",
                 url: "/api/reg_form",
                 data: $.param(auth),
-                headers: {"Content-Type": "application/x-www-form-urlencoded"}
+                headers: { "Content-Type" : "application/x-www-form-urlencoded" }
             }).then(
                 (data) => {
                     resultMessageEl.style.color = 'green';

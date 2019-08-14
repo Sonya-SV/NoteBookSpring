@@ -5,6 +5,7 @@ import com.training.spring.notebook.service.RegFormService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -24,8 +25,8 @@ public class RegFormController {
         log.info("{}", note);
     }
 
-//    @ExceptionHandler(RuntimeException.class)
-//    public ResponseEntity handleRuntimeException(RuntimeException ex) {
-//        return new ResponseEntity(HttpStatus.BAD_REQUEST);
-//    }
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity handleRuntimeException(RuntimeException ex) {
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
+    }
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LoginFormService {
-    public String inputUser(UserDTO name) {
+    public String inputUser(UserDTO user) {
         return "";
     }
 }
