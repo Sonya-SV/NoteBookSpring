@@ -2,7 +2,6 @@ package com.training.spring.notebook.controller;
 
 import com.training.spring.notebook.dto.UserDTO;
 import com.training.spring.notebook.service.LoginFormService;
-import com.training.spring.notebook.service.RegFormService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

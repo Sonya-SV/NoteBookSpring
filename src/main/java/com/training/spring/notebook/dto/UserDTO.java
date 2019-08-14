@@ -1,5 +1,6 @@
 package com.training.spring.notebook.dto;
 
+import com.training.spring.notebook.entity.User.*;
 import lombok.*;
 
 @Getter

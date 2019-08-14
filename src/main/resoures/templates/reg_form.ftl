@@ -10,36 +10,43 @@
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 </head>
 <body ng-app="registration_form" ng-controller="RegCtrl">
-<#--<div class="col-md-8 col-md-offset-2">-->
-<#--    <h1>Registration Form</h1>-->
-<#--</div>-->
+
 <div class="container" style="margin-top: 60px">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h2 class="page-header">Registration Form</h2>
-            <form style="margin-bottom: 30px" name="form" autocomplete="off" novalidate ng-submit="form.$valid && sendForm(auth)">
-                <div class="form-group">
-                    <label for="exampleInputName">First name</label>
-                    <input type="text"
-                           class="form-control"
-                           id="exampleInputName"
-                           placeholder="First Name"
-                           required
-                           ng-model="auth.name">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default" >
+                <div class="panel-heading">
+                    <h3 class="panel-title">Registration Form</h3>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputLogin">Login</label>
-                    <input type="text"
-                           class="form-control"
-                           id="exampleInputLogin"
-                           placeholder="Login"
-                           required
-                           ng-model="auth.login">
+                <div class="panel-body">
+                    <h3 id="resultMessage">{{message}}</h3>
+                    <form style="margin-bottom: 30px" name="form" autocomplete="off" novalidate
+                          ng-submit="form.$valid && sendForm(auth)">
+                        <div class="form-group">
+                            <label for="exampleInputName">First name</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="exampleInputName"
+                                   placeholder="First Name"
+                                   required
+                                   ng-model="auth.name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputLogin">Login</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="exampleInputLogin"
+                                   placeholder="Login"
+                                   required
+                                   ng-model="auth.login">
+                        </div>
+                        <button type="submit" class="btn btn-success" style="margin-top:30px"
+                                ng-disabled="form.$invalid">
+                            Registration
+                        </button>
+                    </form>
                 </div>
-                <button type="submit" class="btn btn-default" style="margin-top:30px" ng-disabled="form.$invalid">
-                    Submit
-                </button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
