@@ -9,6 +9,8 @@ angular.module("registration_form", [])
         exampleInputNameEl.addEventListener('input', () => {
             inputNameLabel.style.color = 'black';
             inputLoginLabel.style.color = 'black';
+            inputEmailLabel.style.color = 'black';
+            inputPasswordLabel.style.color = 'black';
             $scope.message = '';
         });
         $scope.sendForm = function(auth){
@@ -23,13 +25,20 @@ angular.module("registration_form", [])
                     $scope.message = 'Успешно зарегистрирован';
                     exampleInputNameEl.value = '';
                     exampleInputLoginEl.value = '';
+                    exampleInputEmailEl.value ='';
+                    exampleInputPasswordEl.value='';
+                    //TODO write more
                 },
                 (error) => {
                     resultMessageEl.style.color = 'red';
                     inputNameLabel.style.color = 'red';
                     inputLoginLabel.style.color = 'red';
+                    inputEmailLabel.style.color = 'red';
+                    inputPasswordLabel.style.color = 'red';
                     exampleInputNameEl.value = '';
                     exampleInputLoginEl.value = '';
+                    exampleInputEmailEl.value ='';
+                    exampleInputPasswordEl.value='';
                     $scope.message = 'При регистрации произошла ошибка';
                 }
             );

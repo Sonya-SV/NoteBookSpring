@@ -17,7 +17,11 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default" >
                 <div class="panel-heading" >
-                    <h3 class="panel-title">Registration Form</h3>
+                    <h3 class="panel-title" style="display: inline-block">Registration Form</h3>
+                    <div class="dropdown" style="float: right; display: inline-block">
+                            <a href="#">UA</a>
+                            <a href="#">EN</a>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <h3 id="resultMessage">{{message}}</h3>
@@ -30,16 +34,55 @@
                                    id="exampleInputName1"
                                    placeholder="First Name"
                                    required
-                                   ng-model="auth.name">
+                                   ng-model="auth.firstName">
                         </div>
-                        <div class="form-group">
-                            <label id ="inputLoginLabel1" for="exampleInputLogin1">Login</label>
+                        <div class="form-group" >
+                            <label for="exampleInputName">Last name</label>
                             <input type="text"
                                    class="form-control"
-                                   id="exampleInputLogin1"
-                                   placeholder="Login"
+                                   id="exampleInputName"
+                                   placeholder="Last Name"
                                    required
-                                   ng-model="auth.login">
+                                   ng-model="auth.lastName">
+                        </div>
+<#--                        <div class="form-group">-->
+<#--                            <label for="exampleInputLogin">Login</label>-->
+<#--                            <input type="text"-->
+<#--                                   class="form-control"-->
+<#--                                   id="exampleInputLogin"-->
+<#--                                   placeholder="Login"-->
+<#--                                   required-->
+<#--                                   ng-model="auth.login">-->
+<#--                        </div>-->
+                        <div class="form-group">
+                            <label id = "exampleInputEmailLabel" for="exampleInputEmail">Email address</label>
+                            <input type="email"
+                                   class="form-control"
+                                   id="exampleInputEmail"
+                                   placeholder="Email"
+                                   required
+                                   ng-model="auth.email">
+
+                        </div>
+<#--                        <div class="form-group">-->
+<#--                            <label id = "exampleInputEmailLabel1" for="exampleInputEmail1">Email address</label>-->
+<#--                            <input type="email"-->
+<#--                                   class="form-control"-->
+<#--                                   id="exampleInputEmail1"-->
+<#--                                   placeholder="Email"-->
+<#--                                   required-->
+<#--                                   ng-model="auth.email">-->
+
+<#--                        </div>-->
+                        <div class="form-group">
+                            <label id = "exampleInputPasswordLabel" for="exampleInputPassword">Password</label>
+                            <input type="password"
+                                   class="form-control"
+                                   id="exampleInputPassword"
+                                   placeholder="Password"
+                                   required
+                                   ng-model="auth.password">
+
                         </div>
                         <button type="submit" class="btn btn-success" style="margin-top:30px"
                                 ng-disabled="form.$invalid">
